@@ -15,7 +15,7 @@ try:
     # * 2. Generate 5 sampel images (150x150 with random color circle in random position)
     images = []
     names = []
-    for i in range(5):
+    for i in range(g.images_count):
         img = np.zeros((150, 150, 3), dtype=np.uint8)
         center = (np.random.randint(0, 150), np.random.randint(0, 150))
         radius = np.random.randint(10, 50)

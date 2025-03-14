@@ -16,6 +16,7 @@ task_id = sly.env.task_id()
 team_id = sly.env.team_id()
 workspace_id = sly.env.workspace_id()
 project_id = sly.env.project_id()
+images_count = os.environ.get("imagesCount", 5)
 
 project = None
 dataset = None

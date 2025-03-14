@@ -3,6 +3,9 @@
   "type": "app",
   "version": "2.0.0",
   "categories": ["system", "import"],
+  "context_menu": {
+    "target": ["images_project"]
+  },
   "system": true,
   "description": "This app synchronizes data from a cloud storage bucket to Supervisely projects and datasets",
   "docker_image": "supervisely/import-export:6.73.326",

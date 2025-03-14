@@ -21,9 +21,9 @@ try:
         radius = np.random.randint(10, 50)
         color = tuple(np.random.randint(0, 256) for _ in range(3))
         cv2.circle(img, center, radius, color, -1)
-        img_name = f"sample_{i}.png"
-        images.append((img_name, img))
-        names.append(img_name)
+        name = f"sample_{i}.png"
+        images.append(img)
+        names.append(name)
     infos = g.api.image.upload_nps(g.dataset.id, names, images, conflict_resolution="rename")
     sly.logger.info(f"Uploaded {len(infos)} images to dataset {g.dataset.name}")
 

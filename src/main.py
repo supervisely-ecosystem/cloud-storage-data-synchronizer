@@ -31,8 +31,7 @@ except Exception as e:
     f.handle_exception_and_stop(e, "Failed to upload images to dataset")
 
 # * 4. Set output project
-output_title = f"{g.project.name}. New dataset:{g.dataset.name}"
-g.api.task.set_output_project(g.task_id, g.project.id, output_title)
+g.api.task.set_output_project(g.task_id, g.project.id, g.dataset.name)
 
 # * 5. Clean app_data directory
 sly.fs.clean_dir(g.app_data)

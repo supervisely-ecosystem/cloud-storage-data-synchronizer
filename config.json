@@ -1,0 +1,13 @@
+{
+  "name": "Cloud Storage Data Synchronizer",
+  "type": "app",
+  "version": "2.0.0",
+  "categories": ["system", "import"],
+  "system": true,
+  "description": "This app synchronizes data from a cloud storage bucket to Supervisely projects and datasets",
+  "docker_image": "supervisely/import-export:6.73.326",
+  "min_instance_version": "6.12.33",
+  "main_script": "src/main.py",
+  "task_location": "workspace_tasks",
+  "headless": true
+}

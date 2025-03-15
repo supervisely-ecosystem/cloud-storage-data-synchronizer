@@ -1,4 +1,5 @@
 from datetime import datetime
+from urllib.parse import unquote
 
 import src.functions as f
 import src.globals as g
@@ -22,7 +23,7 @@ try:
     # )
     existing_links = set(
         [
-            i.link
+            unquote(i.link)
             for ds in g.api.dataset.get_list(g.project.id, recursive=True)
             for i in g.api.image.get_list(ds.id, force_metadata_for_links=False)
         ]
@@ -49,6 +50,7 @@ try:
     # new_names = remote_names - existing_names
     if len(new_links) == 0:
         raise Exception("No new files to upload")
+    sly.logger.info(f"Found {len(new_links)} new images to upload: {new_links}")
 
     # * 4. Prepare files for upload
     import_manager = sly.ImportManager(

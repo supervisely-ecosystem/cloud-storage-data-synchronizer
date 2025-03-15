@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 if sly.is_development():
     load_dotenv("local.env")
-    load_dotenv(os.path.expanduser("~/supervisely.env"))
+    load_dotenv(os.path.expanduser("~/demo_supervisely.env"))
 
 api = sly.Api()
 
@@ -16,7 +16,7 @@ task_id = sly.env.task_id()
 team_id = sly.env.team_id()
 workspace_id = sly.env.workspace_id()
 project_id = sly.env.project_id()
-images_count = int(os.environ.get("modal.state.imagesCount", 5))
+folder = sly.env.folder()
 
 project = None
 dataset = None

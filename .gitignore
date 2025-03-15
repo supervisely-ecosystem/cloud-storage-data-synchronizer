@@ -8,3 +8,4 @@ test_files
 temp
 __pycache__
 src/tests/
+supervisely

@@ -83,7 +83,7 @@ try:
             return img_ids
 
         for item in converter.get_items():
-            if item.path in existing_links:
+            if converter.remote_files_map.get(item.path) in existing_links:
                 continue
             # if sly.fs.get_file_name(item.path) not in new_names:
             #     continue

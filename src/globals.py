@@ -1,5 +1,5 @@
 import os
-
+import json
 from dotenv import load_dotenv
 
 import supervisely as sly
@@ -8,7 +8,7 @@ if sly.is_development():
     load_dotenv("local.env")
     load_dotenv(os.path.expanduser("~/supervisely.env"))
 
-os.environ["APP_CATEGORIES"] = "import"
+os.environ["APP_CATEGORIES"] = json.dumps(["import"])
 
 api = sly.Api()
 

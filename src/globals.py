@@ -8,6 +8,8 @@ if sly.is_development():
     load_dotenv("local.env")
     load_dotenv(os.path.expanduser("~/supervisely.env"))
 
+os.environ["APP_CATEGORIES"] = "import"
+
 api = sly.Api()
 
 app_data = sly.app.get_data_dir()

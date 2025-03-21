@@ -1,0 +1,4 @@
+git+https://github.com/supervisely/supervisely.git@env-upload-count
+# supervisely==6.73.326
+# black
+# pycocotools

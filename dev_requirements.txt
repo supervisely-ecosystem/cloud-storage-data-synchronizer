@@ -1,3 +1,0 @@
-supervisely==6.73.326
-black
-pycocotools

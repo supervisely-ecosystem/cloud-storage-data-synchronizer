@@ -111,6 +111,7 @@ try:
         if sly.is_development():
             progress.close()
 
+    g.api.task.set_output_project(g.task_id, g.project.id, g.dataset.name)
     sly.logger.info(
         f"Uploaded {uploaded_items_count} images to dataset {g.dataset.name}",
     )

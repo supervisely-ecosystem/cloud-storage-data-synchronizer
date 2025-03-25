@@ -23,7 +23,7 @@ try:
     # )
     existing_links = set(
         [
-            unquote(i.link)
+            unquote(i.link) if i.link else None
             for ds in g.api.dataset.get_list(g.project.id, recursive=True)
             for i in g.api.image.get_list(ds.id, force_metadata_for_links=False)
         ]

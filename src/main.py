@@ -94,7 +94,7 @@ try:
             paths.append(item.path)
             image_meta = item.meta or {}
             if isinstance(image_meta, str):  # path to file
-                image_meta = sly.jsonload_json_file(image_meta)
+                image_meta = sly.json.load_json_file(image_meta)
             metas.append(image_meta)
             items.append(item)
 

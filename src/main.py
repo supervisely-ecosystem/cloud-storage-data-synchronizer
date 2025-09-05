@@ -92,6 +92,8 @@ try:
 
         # * 4. Set output project
         g.api.task.set_output_project(g.task_id, g.project.id, g.dataset.name)
+    else:
+        sly.logger.info("No new images to upload.")
 
 except Exception as e:
     f.handle_exception_and_stop(e, "Failed to upload images to dataset")

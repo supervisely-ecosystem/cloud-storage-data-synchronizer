@@ -11,5 +11,6 @@
   "min_instance_version": "6.15.2",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
+  "icon": "https://github.com/supervisely-ecosystem/cloud-storage-data-synchronizer/releases/download/v0.0.1/icon.jpg",
   "headless": true
 }

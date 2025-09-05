@@ -7,8 +7,8 @@
     "target": ["images_project"]
   },
   "description": "This app imports new data from a specified Cloud Storage bucket to a Supervisely project.",
-  "docker_image": "supervisely/import-export:6.73.326",
-  "min_instance_version": "6.12.33",
+  "docker_image": "supervisely/import-export:6.73.436",
+  "min_instance_version": "6.15.2",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
   "headless": true

@@ -1,7 +1,6 @@
+import src.globals as g
 import supervisely as sly
 from supervisely.io.exception_handlers import ErrorHandler
-
-import src.globals as g
 
 
 def handle_exception_and_stop(exc: Exception, msg: str = "Error"):

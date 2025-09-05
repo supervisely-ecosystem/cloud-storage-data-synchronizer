@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <sly-field title="Provider">
+            <el-select v-model="state.provider" placeholder="Select cloud provider">
+                <el-option key="google" label="google cloud storage" value="google"></el-option>
+                <el-option key="amazon" label="amazon s3" value="s3"></el-option>
+                <el-option key="azure" label="azure storage" value="azure"></el-option>
+            </el-select>
+        </sly-field>
+    </div>
+    <div>
+        <sly-field title="Bucket name and path" description="Sync from <bucket name>/<project path>">
+            <el-input placeholder="bucket-test-import/demo/my_project" v-model="state.bucketName"></el-input>
+        </sly-field>
+    </div>
+</div>

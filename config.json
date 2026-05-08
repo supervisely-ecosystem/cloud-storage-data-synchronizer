@@ -2,13 +2,18 @@
   "name": "Synchronize data from Cloud Storage",
   "type": "app",
   "version": "2.0.0",
-  "categories": ["system", "import"],
+  "categories": [
+    "system",
+    "import"
+  ],
   "context_menu": {
-    "target": ["images_project"]
+    "target": [
+      "images_project"
+    ]
   },
   "description": "This app imports new data from a specified Cloud Storage bucket to a Supervisely project.",
-  "docker_image": "supervisely/import-export:6.73.436",
-  "min_instance_version": "6.15.2",
+  "docker_image": "supervisely/base-py-sdk-hardened:6.73.564",
+  "instance_version": "6.15.60",
   "main_script": "src/main.py",
   "task_location": "workspace_tasks",
   "icon": "https://github.com/supervisely-ecosystem/cloud-storage-data-synchronizer/releases/download/v0.0.1/icon.jpg",
